@@ -1,7 +1,12 @@
 const { request, json } = require('express')
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
+
 app.use(express.json())
+morgan.token('post', function (req, res,) { return JSON.stringify(req.body)})
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post'))
+
 
 let persons = [
     {
@@ -42,8 +47,8 @@ app.get('/api/persons/:id', (request, response) => {
     const id = Number(request.params.id)
     const person = persons.find(person => person.id === id)
     person
-    ? response.json(person)
-    : response.status(404).end()
+        ? response.json(person)
+        : response.status(404).end()
 })
 
 app.delete('/api/persons/:id', (request, response) => {
@@ -64,9 +69,9 @@ app.post('/api/persons', (request, response) => {
     person.id = newID
 
     if (!person.name)
-        return response.status(400).json({error: 'name can not be empty'})
+        return response.status(400).json({ error: 'name can not be empty' })
     if (!person.number)
-        return response.status(400).json({error: 'number can not be empty'})
+        return response.status(400).json({ error: 'number can not be empty' })
 
     if (personExist(person))
         return response.status(400).json({ error: 'name must be unique' })
@@ -74,6 +79,8 @@ app.post('/api/persons', (request, response) => {
     persons = persons.concat(person)
     response.json(person)
 })
+
+
 
 const PORT = 3001
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))

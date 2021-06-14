@@ -1,0 +1,19 @@
+{
+  "name": "phonebookbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pasagedev/bootcamp-exPart3.git"
+  },
+  "author": "Pablo Salas Gelich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pasagedev/bootcamp-exPart3/issues"
+  },
+  "homepage": "https://github.com/pasagedev/bootcamp-exPart3#readme"
+}

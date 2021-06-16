@@ -5,3 +5,12 @@ Content-Type: application/json
     "name": "pepe",
     "number": 321231
 }
+
+### Heroku
+POST https://glacial-stream-15944.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "pepe",
+    "number": 321231
+}

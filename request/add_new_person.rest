@@ -2,8 +2,8 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "unico rq",
-    "number": 321231
+    "name": "aaañb",
+    "number": "012344"
 }
 
 ### Heroku
@@ -12,5 +12,5 @@ Content-Type: application/json
 
 {
     "name": "Pablo en MongoDb",
-    "number": 321231
+    "number": "321231"
 }

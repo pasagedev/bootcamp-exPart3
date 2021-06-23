@@ -1,6 +1,7 @@
-PUT http://localhost:3001/api/persons/60cce6b30d4edc47b825b24b
-Content-Type: application/json
+PUT http://localhost:3001/api/persons/60cce6b30d4edc47b825b24b 
+content-Type: application/json
 
 {
-    "name": "Fla",
+    "name": "rest client updated",
+    "number": 303456
 }
